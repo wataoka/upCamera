@@ -10,6 +10,9 @@
 		106799DBA1DFC09C30768620 /* Pods_upCameraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677256FEDBB2BA71B88223BC /* Pods_upCameraTests.framework */; };
 		51A90009A85C6A7E7F0DA10A /* Pods_upCameraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE3851762FA86C1D0874D02 /* Pods_upCameraUITests.framework */; };
 		98E3A5125C70D5CD6866986E /* Pods_upCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B25E3C8983D7F7CF6E012F9 /* Pods_upCamera.framework */; };
+		E7010929203587F00099046B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77C59AB20341B2E00F211E2 /* Assets.xcassets */; };
+		E701092A203587F00099046B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77C59AB20341B2E00F211E2 /* Assets.xcassets */; };
+		E701092C2035972C0099046B /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E701092B2035972C0099046B /* VideoViewController.swift */; };
 		E77C59A520341B2E00F211E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77C59A420341B2E00F211E2 /* AppDelegate.swift */; };
 		E77C59A720341B2E00F211E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77C59A620341B2E00F211E2 /* ViewController.swift */; };
 		E77C59AA20341B2E00F211E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77C59A820341B2E00F211E2 /* Main.storyboard */; };
@@ -52,6 +55,7 @@
 		6F8DDC918D5ED32FD4C4E29A /* Pods-upCameraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upCameraUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-upCameraUITests/Pods-upCameraUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7BE3851762FA86C1D0874D02 /* Pods_upCameraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_upCameraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4BBE68A0D94B2AFBCD64C3 /* Pods-upCameraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upCameraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-upCameraTests/Pods-upCameraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E701092B2035972C0099046B /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		E77BE50720351E480001CAFC /* upCamera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "upCamera-Bridging-Header.h"; sourceTree = "<group>"; };
 		E77C59A120341B2E00F211E2 /* upCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77C59A420341B2E00F211E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				E77C59DB2034438700F211E2 /* stop.mp3 */,
 				E77C59A420341B2E00F211E2 /* AppDelegate.swift */,
 				E77C59A620341B2E00F211E2 /* ViewController.swift */,
+				E701092B2035972C0099046B /* VideoViewController.swift */,
 				E77C59A820341B2E00F211E2 /* Main.storyboard */,
 				E77C59AB20341B2E00F211E2 /* Assets.xcassets */,
 				E77C59AD20341B2E00F211E2 /* LaunchScreen.storyboard */,
@@ -307,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77C59E02034438800F211E2 /* stop.mp3 in Resources */,
+				E7010929203587F00099046B /* Assets.xcassets in Resources */,
 				E77C59DD2034438800F211E2 /* start.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77C59E12034438800F211E2 /* stop.mp3 in Resources */,
+				E701092A203587F00099046B /* Assets.xcassets in Resources */,
 				E77C59DE2034438800F211E2 /* start.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +513,7 @@
 			files = (
 				E77C59A720341B2E00F211E2 /* ViewController.swift in Sources */,
 				E77C59A520341B2E00F211E2 /* AppDelegate.swift in Sources */,
+				E701092C2035972C0099046B /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

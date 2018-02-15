@@ -62,7 +62,8 @@ class ViewController: UIViewController {
         let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: 50))
         myButton.backgroundColor = UIColor.red
         myButton.layer.masksToBounds = true
-        myButton.setTitle("撮影", for: .normal)
+        myButton.setTitle("●", for: .normal)
+        myButton.titleLabel!.font = UIFont(name: "HelveticaNeue-Medium", size: 40)
         myButton.layer.cornerRadius = 20.0
         myButton.layer.position = CGPoint(x: self.view.bounds.width/2, y:self.view.bounds.height-50)
         myButton.addTarget(self, action: #selector(onClickMyButton), for: .touchUpInside)
@@ -70,8 +71,26 @@ class ViewController: UIViewController {
         // UIボタンをViewに追加.
         self.view.addSubview(myButton);
         
+        // UIボタンを作成.
+        let vButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        vButton.backgroundColor = UIColor.orange
+        vButton.layer.masksToBounds = true
+        vButton.setTitle("▶︎", for: .normal)
+        vButton.titleLabel!.font = UIFont(name: "HelveticaNeue-Medium", size: 20)
+        vButton.layer.cornerRadius = 20.0
+        vButton.layer.position = CGPoint(x: self.view.bounds.width - 50, y:self.view.bounds.height-50)
+        vButton.addTarget(self, action: #selector(onClickvButton), for: .touchUpInside)
+        
+        // UIボタンをViewに追加.
+        self.view.addSubview(vButton);
+        
     }
     
+    @objc func onClickvButton(sender: UIButton){
+        var storyboard: UIStoryboard = self.storyboard!
+        var next = storyboard.instantiateViewController(withIdentifier: "VideoViewController")
+        self.present(next as! UIViewController,animated: true, completion: nil)
+    }
     
     
     // ボタンイベント.
@@ -112,11 +131,11 @@ class ViewController: UIViewController {
             }
             
             
-            guard let session = TWTRTwitter.sharedInstance().sessionStore.session() else {
+            guard var session = TWTRTwitter.sharedInstance().sessionStore.session() else {
                 return
             }
             
-            let apiClient = TWTRAPIClient(userID: session.userID)
+            var apiClient = TWTRAPIClient(userID: session.userID)
             apiClient.sendTweet(withText: "", image: rotateImage, completion: {(success, error) in
                 if (success != nil) {
                     print("success is no nil")
