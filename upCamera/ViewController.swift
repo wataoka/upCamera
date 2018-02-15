@@ -23,11 +23,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-
-        
         // セッションの作成.
         mySession = AVCaptureSession()
         
@@ -77,6 +72,8 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
     // ボタンイベント.
     @objc func onClickMyButton(sender: UIButton){
         
@@ -93,7 +90,10 @@ class ViewController: UIViewController {
             // 取得したImageのDataBufferをJpegに変換.
             let myImageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: imageDataBuffer!, previewPhotoSampleBuffer: nil)
             // JpegからUIIMageを作成.
-            let myImage = UIImage(data: myImageData!)
+            var myImage = UIImage(data: myImageData!)
+            let rotateImage = UIImage(cgImage: (myImage?.cgImage)!, scale: (myImage?.scale)!, orientation: .up)
+            
+            
             
             //self.myComposeView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             //self.myComposeView.setInitialText("test")
@@ -117,18 +117,14 @@ class ViewController: UIViewController {
             }
             
             let apiClient = TWTRAPIClient(userID: session.userID)
-            apiClient.sendTweet(withText: "", image: myImage!, completion: {(success, error) in
+            apiClient.sendTweet(withText: "", image: rotateImage, completion: {(success, error) in
                 if (success != nil) {
                     print("success is no nil")
                 }
             })
-            
-            
-            
-        
-            
-            //self.present(self.myComposeView, animated:true, completion:nil)
-
         })
     }
+    
+    
+
 }
